@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_package = "com.colobu.rpctest";
+
+package ntp;
+
+service Ntp {
+	rpc Query (NtpRequest) returns (NtpReply) {}
+}
+
+message NtpRequest {
+	//string timezone = 1;
+}
+
+message NtpReply {
+	//string message = 1;
+	int64 message = 1;
+}
